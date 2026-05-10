@@ -201,8 +201,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
-        "y": 180,
+        "x": 440,
+        "y": 120,
         "wires": []
     },
     {
@@ -253,8 +253,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 410,
-        "y": 120,
+        "x": 430,
+        "y": 60,
         "wires": [
             []
         ]
@@ -277,8 +277,71 @@
         "wires": [
             [
                 "2b4f4676302773bd",
-                "4319eb643c870ea8"
+                "4319eb643c870ea8",
+                "3fcbe503b9ff9dab"
             ]
         ]
+    },
+    {
+        "id": "3fcbe503b9ff9dab",
+        "type": "switch",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "sw > 30",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "deaed0ad222ac046"
+            ]
+        ]
+    },
+    {
+        "id": "deaed0ad222ac046",
+        "type": "function",
+        "z": "550f0f5ae083201b",
+        "name": "Testo Email",
+        "func": "msg.payload = `ATTENZIONE\nTemperatura elevata rilevata!\nValore: ${msg.payload} °C\nSensore: ${msg.topic}\nSistema IoT - Laboratorio ITS`;\nmsg.from = \"no-reply@nodered.local\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 220,
+        "wires": [
+            [
+                "4f6efd9ebd9e6879"
+            ]
+        ]
+    },
+    {
+        "id": "4f6efd9ebd9e6879",
+        "type": "e-mail",
+        "z": "550f0f5ae083201b",
+        "server": "mailhog",
+        "port": "1025",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": false,
+        "name": "alert@iot.local",
+        "dname": "",
+        "x": 860,
+        "y": 220,
+        "wires": []
     }
 ]

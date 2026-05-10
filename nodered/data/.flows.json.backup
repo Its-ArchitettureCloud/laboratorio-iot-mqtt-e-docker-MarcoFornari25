@@ -70,25 +70,124 @@
         "sessionExpiry": ""
     },
     {
-        "id": "8662850191447bf9",
-        "type": "mqtt in",
-        "z": "550f0f5ae083201b",
+        "id": "6313de05cd7458bf",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "4269164df161894c",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "a6314e80b6900b15",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "6313de05cd7458bf",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "4269164df161894c",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "74adc75151c862b8",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "a6314e80b6900b15",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default"
+    },
+    {
+        "id": "7d4f63d84d5bad97",
+        "type": "mqtt-broker",
         "name": "",
-        "topic": "iot/aula/+/temperatura",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "660f9d302a0b2500",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 180,
-        "y": 120,
-        "wires": [
-            [
-                "4319eb643c870ea8"
-            ]
-        ]
+        "broker": "mosquitto",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
     },
     {
         "id": "4319eb643c870ea8",
@@ -102,8 +201,84 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 440,
-        "y": 120,
+        "x": 400,
+        "y": 180,
         "wires": []
+    },
+    {
+        "id": "2b4f4676302773bd",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "74adc75151c862b8",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperatura",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 410,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c996e46473aea9b",
+        "type": "mqtt in",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "topic": "iot/aula/+/temperatura",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "7d4f63d84d5bad97",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "2b4f4676302773bd",
+                "4319eb643c870ea8"
+            ]
+        ]
     }
 ]
