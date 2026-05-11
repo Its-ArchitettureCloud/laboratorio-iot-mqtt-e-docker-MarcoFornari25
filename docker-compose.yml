@@ -9,17 +9,6 @@ services:
     volumes:
       - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
 
-  sensor:
-    build: ./sensor
-    container_name: sensor-01
-    environment:
-      MQTT_BROKER: mosquitto
-      MQTT_PORT: 1883
-      SENSOR_ID: sensore01
-      SEND_INTERVAL: 5
-    depends_on:
-      - mosquitto
-
   nodered:
     image: nodered/node-red:latest
     container_name: node-red
@@ -29,9 +18,121 @@ services:
       - ./nodered/data:/data
     depends_on:
       - mosquitto
+      - mailhog
+
   mailhog:
     image: mailhog/mailhog:v1.0.1
     container_name: mailhog
     ports:
       - "1025:1025"
       - "8025:8025"
+
+  sensor01:
+    build: ./sensor
+    container_name: sensor-01
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor01
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor02:
+    build: ./sensor
+    container_name: sensor-02
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor02
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor03:
+    build: ./sensor
+    container_name: sensor-03
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor03
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor04:
+    build: ./sensor
+    container_name: sensor-04
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor04
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor05:
+    build: ./sensor
+    container_name: sensor-05
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor05
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor06:
+    build: ./sensor
+    container_name: sensor-06
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor06
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor07:
+    build: ./sensor
+    container_name: sensor-07
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor07
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor08:
+    build: ./sensor
+    container_name: sensor-08
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor08
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor09:
+    build: ./sensor
+    container_name: sensor-09
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor09
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor10:
+    build: ./sensor
+    container_name: sensor-10
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor10
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
