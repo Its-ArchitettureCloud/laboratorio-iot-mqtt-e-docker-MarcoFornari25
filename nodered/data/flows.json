@@ -1,0 +1,1667 @@
+[
+    {
+        "id": "550f0f5ae083201b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "42999d077b19b62c",
+        "type": "mqtt-broker",
+        "name": "iot/aula/+/temperatura",
+        "broker": "mosquitto",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "660f9d302a0b2500",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6313de05cd7458bf",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "4269164df161894c",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "a6314e80b6900b15",
+        "type": "ui-page",
+        "name": "Temperatura",
+        "ui": "6313de05cd7458bf",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "4269164df161894c",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "74adc75151c862b8",
+        "type": "ui-group",
+        "name": "Temperatura",
+        "page": "a6314e80b6900b15",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "7d4f63d84d5bad97",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9a5eae9d8e2bbb15",
+        "type": "ui-group",
+        "name": "HTTP",
+        "page": "a6314e80b6900b15",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "4319eb643c870ea8",
+        "type": "debug",
+        "z": "550f0f5ae083201b",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1c996e46473aea9b",
+        "type": "mqtt in",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "topic": "iot/aula/+/temperatura",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "7d4f63d84d5bad97",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "4319eb643c870ea8",
+                "3fcbe503b9ff9dab",
+                "ccb21ae05a1fe49e"
+            ]
+        ]
+    },
+    {
+        "id": "3fcbe503b9ff9dab",
+        "type": "switch",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "deaed0ad222ac046"
+            ]
+        ]
+    },
+    {
+        "id": "deaed0ad222ac046",
+        "type": "function",
+        "z": "550f0f5ae083201b",
+        "name": "Testo Email",
+        "func": "msg.payload = `ATTENZIONE\nTemperatura elevata rilevata!\nValore: ${msg.payload} °C\nSensore: ${msg.topic}\nSistema IoT - Laboratorio ITS`;\nmsg.from = \"no-reply@nodered.local\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 220,
+        "wires": [
+            [
+                "4f6efd9ebd9e6879"
+            ]
+        ]
+    },
+    {
+        "id": "4f6efd9ebd9e6879",
+        "type": "e-mail",
+        "z": "550f0f5ae083201b",
+        "server": "mailhog",
+        "port": "1025",
+        "authtype": "NONE",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": false,
+        "tls": false,
+        "name": "alert@iot.local",
+        "dname": "",
+        "x": 860,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ea687f1731eef64c",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "74adc75151c862b8",
+        "order": 19,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensore 1 ",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 660,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e4e937e42880bf7",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "74adc75151c862b8",
+        "order": 10,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensore 2",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 660,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc4ea166912e3f04",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "74adc75151c862b8",
+        "order": 18,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensore 3",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 660,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0aa5dac7c02c19b",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "74adc75151c862b8",
+        "order": 17,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensore 4",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 660,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "298bab17db8ba5a0",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "74adc75151c862b8",
+        "order": 16,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensore 5",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 660,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3af1d5cb4503a14b",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "74adc75151c862b8",
+        "order": 15,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensore 6",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 660,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "16ebd43c39fc5849",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "74adc75151c862b8",
+        "order": 14,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensore 7",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 660,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8f9261689bf4d3c",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "74adc75151c862b8",
+        "order": 13,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensore 8",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 660,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "604718996482336f",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "74adc75151c862b8",
+        "order": 12,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensore 9",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 660,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6b2e77ac59a256fe",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "74adc75151c862b8",
+        "order": 11,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensore 10",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 670,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ccb21ae05a1fe49e",
+        "type": "switch",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "iot/aula/sensor01/temperatura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "iot/aula/sensor02/temperatura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "iot/aula/sensor03/temperatura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "iot/aula/sensor04/temperatura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "iot/aula/sensor05/temperatura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "iot/aula/sensor06/temperatura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "iot/aula/sensor07/temperatura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "iot/aula/sensor08/temperatura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "iot/aula/sensor09/temperatura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "iot/aula/sensor10/temperatura",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 10,
+        "x": 370,
+        "y": 440,
+        "wires": [
+            [
+                "ea687f1731eef64c"
+            ],
+            [
+                "0e4e937e42880bf7"
+            ],
+            [
+                "bc4ea166912e3f04"
+            ],
+            [
+                "f0aa5dac7c02c19b"
+            ],
+            [
+                "298bab17db8ba5a0"
+            ],
+            [
+                "3af1d5cb4503a14b"
+            ],
+            [
+                "16ebd43c39fc5849"
+            ],
+            [
+                "b8f9261689bf4d3c"
+            ],
+            [
+                "604718996482336f"
+            ],
+            [
+                "6b2e77ac59a256fe"
+            ]
+        ]
+    },
+    {
+        "id": "f96c29fd16789b29",
+        "type": "http in",
+        "z": "550f0f5ae083201b",
+        "name": "/sensor",
+        "url": "/sensor",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 410,
+        "y": 960,
+        "wires": [
+            [
+                "9793d3ccb0f3c75c",
+                "fb5966d0407b807e"
+            ]
+        ]
+    },
+    {
+        "id": "9793d3ccb0f3c75c",
+        "type": "json",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 730,
+        "y": 920,
+        "wires": [
+            [
+                "b461838f1780dfc5",
+                "ec67e272ef7c5739"
+            ]
+        ]
+    },
+    {
+        "id": "b461838f1780dfc5",
+        "type": "debug",
+        "z": "550f0f5ae083201b",
+        "name": "Debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "ec67e272ef7c5739",
+        "type": "http response",
+        "z": "550f0f5ae083201b",
+        "name": "200 status Code",
+        "statusCode": "200",
+        "headers": {},
+        "x": 960,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "1e798d7bbe4974ee",
+        "type": "http response",
+        "z": "550f0f5ae083201b",
+        "name": "500 status Code",
+        "statusCode": "500",
+        "headers": {},
+        "x": 960,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "da070e3367fa23ba",
+        "type": "http response",
+        "z": "550f0f5ae083201b",
+        "name": "400 status Code",
+        "statusCode": "400",
+        "headers": {},
+        "x": 960,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "fb5966d0407b807e",
+        "type": "switch",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "property": "payload.sensor_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "sensorhttp01",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sensorhttp02",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sensorhttp03",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sensorhttp04",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sensorhttp05",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sensorhttp06",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sensorhttp07",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sensorhttp08",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sensorhttp09",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sensorhttp10",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 10,
+        "x": 610,
+        "y": 1340,
+        "wires": [
+            [
+                "c6e4339d077b9e17"
+            ],
+            [
+                "528281cf4a61050a"
+            ],
+            [
+                "347b842ee23dddae"
+            ],
+            [
+                "1d4cb9040a597a5b"
+            ],
+            [
+                "d4f51bcd21a4c313"
+            ],
+            [
+                "bee18cf69a67bc9b"
+            ],
+            [
+                "badbf64c79206a67"
+            ],
+            [
+                "35b91a7a341dd934"
+            ],
+            [
+                "0caef79c58dd184f"
+            ],
+            [
+                "07a953700d700def"
+            ]
+        ]
+    },
+    {
+        "id": "c6e4339d077b9e17",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "9a5eae9d8e2bbb15",
+        "order": 20,
+        "value": "payload.temperatura",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensore http 01 ",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 960,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "528281cf4a61050a",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "",
+        "group": "9a5eae9d8e2bbb15",
+        "order": 9,
+        "value": "payload.temperatura",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensore http 02",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 960,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "347b842ee23dddae",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "sensore-http-03",
+        "group": "9a5eae9d8e2bbb15",
+        "order": 8,
+        "value": "payload.temperatura",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensorHttp03",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 960,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1d4cb9040a597a5b",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "sensore-http-04",
+        "group": "9a5eae9d8e2bbb15",
+        "order": 7,
+        "value": "payload.temperatura",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensorHttp04",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 960,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4f51bcd21a4c313",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "sensore-http-05",
+        "group": "9a5eae9d8e2bbb15",
+        "order": 6,
+        "value": "payload.temperatura",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensorHttp05",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 940,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bee18cf69a67bc9b",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "sensore-http-06",
+        "group": "9a5eae9d8e2bbb15",
+        "order": 5,
+        "value": "payload.temperatura",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensorHttp06",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 940,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "badbf64c79206a67",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "sensor-http-07",
+        "group": "9a5eae9d8e2bbb15",
+        "order": 4,
+        "value": "payload.temperatura",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensorHttp07",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 940,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35b91a7a341dd934",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "sensore-http-08",
+        "group": "9a5eae9d8e2bbb15",
+        "order": 3,
+        "value": "payload.temperatura",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensorHttp08",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 940,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0caef79c58dd184f",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "sensore-http-09",
+        "group": "9a5eae9d8e2bbb15",
+        "order": 2,
+        "value": "payload.temperatura",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensorHttp09",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 940,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "07a953700d700def",
+        "type": "ui-gauge",
+        "z": "550f0f5ae083201b",
+        "name": "sensore-http-10",
+        "group": "9a5eae9d8e2bbb15",
+        "order": 1,
+        "value": "payload.temperatura",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "sensorHttp10",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 940,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    }
+]

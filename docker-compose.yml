@@ -1,1 +1,271 @@
+version: "3.9"
 
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2
+    container_name: mqtt-broker
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+
+  nodered:
+    image: nodered/node-red:latest
+    container_name: node-red
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./nodered/data:/data
+    depends_on:
+      - mosquitto
+      - mailhog
+# Mailhog
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    container_name: mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+  #MQTT            
+  sensor01:
+    build: ./sensor
+    container_name: sensor-01
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor01
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor02:
+    build: ./sensor
+    container_name: sensor-02
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor02
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor03:
+    build: ./sensor
+    container_name: sensor-03
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor03
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor04:
+    build: ./sensor
+    container_name: sensor-04
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor04
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor05:
+    build: ./sensor
+    container_name: sensor-05
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor05
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor06:
+    build: ./sensor
+    container_name: sensor-06
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor06
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor07:
+    build: ./sensor
+    container_name: sensor-07
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor07
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor08:
+    build: ./sensor
+    container_name: sensor-08
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor08
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor09:
+    build: ./sensor
+    container_name: sensor-09
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor09
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  sensor10:
+    build: ./sensor
+    container_name: sensor-10
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      SENSOR_ID: sensor10
+      SEND_INTERVAL: 5
+    depends_on:
+      - mosquitto
+
+  #HTTP
+  sensorhttp01:
+    build: ./sensor
+    container_name: sensor-http-01
+    environment:
+      PROTOCOL: http
+      HTTP_SERVER: nodered
+      HTTP_PORT: 1880
+      HTTP_ENDPOINT: /sensor
+      SENSOR_ID: sensorhttp01
+      SEND_INTERVAL: 5
+    depends_on:
+      - nodered
+
+  sensorhttp02:
+    build: ./sensor
+    container_name: sensor-http-02
+    environment:
+      PROTOCOL: http
+      HTTP_SERVER: nodered
+      HTTP_PORT: 1880
+      HTTP_ENDPOINT: /sensor
+      SENSOR_ID: sensorhttp02
+      SEND_INTERVAL: 5
+    depends_on:
+      - nodered
+
+  sensorhttp03:
+    build: ./sensor
+    container_name: sensor-http-03
+    environment:
+      PROTOCOL: http
+      HTTP_SERVER: nodered
+      HTTP_PORT: 1880
+      HTTP_ENDPOINT: /sensor
+      SENSOR_ID: sensorhttp03
+      SEND_INTERVAL: 5
+    depends_on:
+      - nodered
+
+  sensorhttp04:
+    build: ./sensor
+    container_name: sensor-http-04
+    environment:
+      PROTOCOL: http
+      HTTP_SERVER: nodered
+      HTTP_PORT: 1880
+      HTTP_ENDPOINT: /sensor
+      SENSOR_ID: sensorhttp04
+      SEND_INTERVAL: 5
+    depends_on:
+      - nodered
+
+  sensorhttp05:
+    build: ./sensor
+    container_name: sensor-http-05
+    environment:
+      PROTOCOL: http
+      HTTP_SERVER: nodered
+      HTTP_PORT: 1880
+      HTTP_ENDPOINT: /sensor
+      SENSOR_ID: sensorhttp05
+      SEND_INTERVAL: 5
+    depends_on:
+      - nodered
+
+  sensorhttp06:
+    build: ./sensor
+    container_name: sensor-http-06
+    environment:
+      PROTOCOL: http
+      HTTP_SERVER: nodered
+      HTTP_PORT: 1880
+      HTTP_ENDPOINT: /sensor
+      SENSOR_ID: sensorhttp06
+      SEND_INTERVAL: 5
+    depends_on:
+      - nodered
+
+  sensorhttp07:
+    build: ./sensor
+    container_name: sensor-http-07
+    environment:
+      PROTOCOL: http
+      HTTP_SERVER: nodered
+      HTTP_PORT: 1880
+      HTTP_ENDPOINT: /sensor
+      SENSOR_ID: sensorhttp07
+      SEND_INTERVAL: 5
+    depends_on:
+      - nodered
+
+  sensorhttp08:
+    build: ./sensor
+    container_name: sensor-http-08
+    environment:
+      PROTOCOL: http
+      HTTP_SERVER: nodered
+      HTTP_PORT: 1880
+      HTTP_ENDPOINT: /sensor
+      SENSOR_ID: sensorhttp08
+      SEND_INTERVAL: 5
+    depends_on:
+      - nodered
+
+  sensorhttp09:
+    build: ./sensor
+    container_name: sensor-http-09
+    environment:
+      PROTOCOL: http
+      HTTP_SERVER: nodered
+      HTTP_PORT: 1880
+      HTTP_ENDPOINT: /sensor
+      SENSOR_ID: sensorhttp09
+      SEND_INTERVAL: 5
+    depends_on:
+      - nodered
+
+  sensorhttp10:
+    build: ./sensor
+    container_name: sensor-http-10
+    environment:
+      PROTOCOL: http
+      HTTP_SERVER: nodered
+      HTTP_PORT: 1880
+      HTTP_ENDPOINT: /sensor
+      SENSOR_ID: sensorhttp10
+      SEND_INTERVAL: 5
+    depends_on:
+      - nodered
+ 
